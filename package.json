@@ -1,0 +1,33 @@
+{
+  "name": "ktelectron",
+  "version": "0.0.0",
+  "main": "output/boot.js",
+  "scripts": {
+    "build": "./gradlew jsBrowserProductionWebpack",
+    "debugBuild": "./gradlew jsBrowserDevelopmentWebpack",
+    "debugStart": "npm run debugBuild&&electron .",
+    "start": "npm run build&&electron .",
+    "package": "npm run build&&electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5"
+  },
+  "build": {
+    "files": [
+      "!src",
+      "!.gradle",
+      "!.idea",
+      "!.kotlin",
+      "!build",
+      "!gradle",
+      "!kotlin-js-store",
+      "!.gitignore",
+      "!.npmrc",
+      "!gradle.properties",
+      "!gradlew",
+      "!gradlew.bat",
+      "!settings.gradle.kts"
+    ]
+  }
+}
