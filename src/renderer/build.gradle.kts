@@ -14,9 +14,6 @@ kotlin {
         browser()
         binaries.executable()
     }
-    sourceSets.jsMain.dependencies {
-        implementation("io.kvision:kvision:8.0.0")
-    }
 }
 
 tasks.named("jsBrowserDevelopmentWebpack") {
