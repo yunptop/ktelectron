@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "main": "output/boot.js",
   "scripts": {
-    "build": "gradlew jsBrowserProductionWebpack",
-    "debugBuild": "gradlew jsBrowserDevelopmentWebpack",
+    "build": "java -cp gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain jsBrowserProductionWebpack",
+    "debugBuild": "java -cp gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain jsBrowserDevelopmentWebpack",
     "debugStart": "npm run debugBuild&&electron .",
     "start": "npm run build&&electron .",
     "package": "npm run build&&electron-builder"
